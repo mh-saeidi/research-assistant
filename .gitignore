@@ -1,0 +1,52 @@
+# Ignore Alembic migration directories and cache files
+alembic/versions/*.py
+alembic/__pycache__/
+
+# Ignore Python cache files
+__pycache__/
+__pycache__
+*.pyc
+*.pyo
+
+# Ignore application cache files
+app/__pycache__/
+app/api/__pycache__/
+app/core/__pycache__/
+app/db/__pycache__/
+app/db/models/__pycache__/
+app/db/schemas/__pycache__/
+app/static/profile_pictures/*
+!app/static/profile_pictures/
+!app/static/profile_pictures/.gitignore
+!app/static/profile_pictures/default.png
+
+
+# Ignore virtual environments
+venv/
+.venv/
+
+# Ignore dotenv files
+*.env
+.env
+# Ignore logs
+*.log
+
+# Ignore SQLite database files
+*.db
+*.sqlite3
+
+# Ignore IDE and editor files
+.idea/
+*.iml
+.vscode/
+
+# Ignore macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Ignore build and distribution directories
+build/
+dist/
+*.egg-info/
+
+celerybeat*
