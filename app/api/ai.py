@@ -9,8 +9,8 @@ import uuid
 
 router = APIRouter()
 
-@router.post("/create-analyst", status_code=status.HTTP_201_CREATED, tags=["AI"])
-def create_analyst(data: schemas.AnalystCreate, db = Depends(get_db)):
+@router.post("/initiate-research", status_code=status.HTTP_201_CREATED, tags=["AI"])
+def initiate_research(data: schemas.AnalystCreate, db = Depends(get_db)):
 
     try:
         if data.session_id is not None:
@@ -42,7 +42,7 @@ def create_analyst(data: schemas.AnalystCreate, db = Depends(get_db)):
             detail=f"detail: {e}"
         )
     
-@router.post("/analyst-feedback", status_code=status.HTTP_200_OK, tags=["AI"])
+@router.post("/research-analyst-feedback", status_code=status.HTTP_200_OK, tags=["AI"])
 def analyst_feedback(data: schemas.AnalystFeedback, db = Depends(get_db)):
 
     try:
