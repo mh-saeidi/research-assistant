@@ -3,7 +3,7 @@ from fastapi import FastAPI, status
 
 from app.db.database import create_database, engine
 from app.db.models import Base
-from app.api import users
+from app.api import users, ai
 
 import contextlib
 
@@ -45,6 +45,7 @@ app.add_middleware(
 )
 
 app.include_router(users.router, prefix="/users", tags=["Users"])
+app.include_router(ai.router, prefix="/ai", tags=["AI"])
 
 @app.get("/", status_code=status.HTTP_200_OK, tags=["Health Check"])
 def health_check():

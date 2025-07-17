@@ -14,3 +14,12 @@ class UserCreate(BaseModel):
 class UserSignup(BaseModel):
     email: str
     password: str
+
+class AnalystCreate(BaseModel):
+    analyst_number: int
+    topic: str
+    session_id: Optional[str] = None
+
+class AnalystFeedback(BaseModel):
+    feedback: str
+    session_id: str

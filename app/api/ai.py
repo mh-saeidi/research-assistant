@@ -1,0 +1,59 @@
+from fastapi import APIRouter, Depends, HTTPException, status
+
+from app.core.auth import Authorization
+from app.db import schemas, models
+from app.db.database import get_db
+from app.utils import CRUD, agent
+
+import uuid
+
+router = APIRouter()
+
+@router.post("/create-analyst", status_code=status.HTTP_201_CREATED, tags=["AI"])
+def create_analyst(data: schemas.AnalystCreate, db = Depends(get_db)):
+
+    try:
+        if data.session_id is not None:
+            if not data.topic or not data.analyst_number:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Missing inputs."
+                )
+            res = agent.generate_analyst(data.analyst_number, data.topic, data.session_id)
+
+            return res
+        
+        elif data.session_id is None:
+            if not data.topic or not data.analyst_number:
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Missing inputs."
+                )
+            data.session_id = str(uuid.uuid4())
+            res = agent.generate_analyst(data.analyst_number, data.topic, data.session_id)
+
+            return {"resault":res, "session_id": data.session_id}
+
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=f"detail: {e}"
+        )
+    
+@router.post("/analyst-feedback", status_code=status.HTTP_200_OK, tags=["AI"])
+def analyst_feedback(data: schemas.AnalystFeedback, db = Depends(get_db)):
+
+    try:
+        res = agent.analyst_human_feedback(data.feedback, data.session_id)
+
+        return res
+
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=f"detail: {e}"
+        )
