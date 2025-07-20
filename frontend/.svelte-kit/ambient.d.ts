@@ -26,7 +26,6 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const PYTHON_BASIC_REPL: string;
 	export const LESSOPEN: string;
 	export const CONDA_PROMPT_MODIFIER: string;
 	export const USER: string;
@@ -35,7 +34,6 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const SHLVL: string;
 	export const npm_config_noproxy: string;
-	export const MOTD_SHOWN: string;
 	export const HOME: string;
 	export const CONDA_SHLVL: string;
 	export const OLDPWD: string;
@@ -45,12 +43,9 @@ declare module '$env/static/private' {
 	export const npm_package_json: string;
 	export const NVM_INC: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
-	export const PS1: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_local_prefix: string;
-	export const PYDEVD_DISABLE_FILE_VALIDATION: string;
-	export const BUNDLED_DEBUGPY_PATH: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const COLORTERM: string;
 	export const _CE_M: string;
@@ -58,7 +53,6 @@ declare module '$env/static/private' {
 	export const COLOR: string;
 	export const NVM_DIR: string;
 	export const WAYLAND_DISPLAY: string;
-	export const VSCODE_L10N_BUNDLE_LOCATION: string;
 	export const LOGNAME: string;
 	export const NAME: string;
 	export const WSL_INTEROP: string;
@@ -69,17 +63,13 @@ declare module '$env/static/private' {
 	export const TERM: string;
 	export const npm_config_cache: string;
 	export const _CE_CONDA: string;
-	export const POSTGRES_PASSWORD: string;
 	export const npm_config_node_gyp: string;
 	export const PATH: string;
 	export const NODE: string;
 	export const npm_package_name: string;
 	export const XDG_RUNTIME_DIR: string;
 	export const DISPLAY: string;
-	export const VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
 	export const LANG: string;
-	export const POSTGRES_USER: string;
-	export const VIRTUAL_ENV_PROMPT: string;
 	export const LS_COLORS: string;
 	export const VSCODE_GIT_IPC_HANDLE: string;
 	export const TERM_PROGRAM: string;
@@ -91,7 +81,6 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_event: string;
 	export const LESSCLOSE: string;
 	export const CONDA_DEFAULT_ENV: string;
-	export const VIRTUAL_ENV: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_init_module: string;
@@ -141,7 +130,6 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		PYTHON_BASIC_REPL: string;
 		LESSOPEN: string;
 		CONDA_PROMPT_MODIFIER: string;
 		USER: string;
@@ -150,7 +138,6 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		SHLVL: string;
 		npm_config_noproxy: string;
-		MOTD_SHOWN: string;
 		HOME: string;
 		CONDA_SHLVL: string;
 		OLDPWD: string;
@@ -160,12 +147,9 @@ declare module '$env/dynamic/private' {
 		npm_package_json: string;
 		NVM_INC: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
-		PS1: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		npm_config_userconfig: string;
 		npm_config_local_prefix: string;
-		PYDEVD_DISABLE_FILE_VALIDATION: string;
-		BUNDLED_DEBUGPY_PATH: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		COLORTERM: string;
 		_CE_M: string;
@@ -173,7 +157,6 @@ declare module '$env/dynamic/private' {
 		COLOR: string;
 		NVM_DIR: string;
 		WAYLAND_DISPLAY: string;
-		VSCODE_L10N_BUNDLE_LOCATION: string;
 		LOGNAME: string;
 		NAME: string;
 		WSL_INTEROP: string;
@@ -184,17 +167,13 @@ declare module '$env/dynamic/private' {
 		TERM: string;
 		npm_config_cache: string;
 		_CE_CONDA: string;
-		POSTGRES_PASSWORD: string;
 		npm_config_node_gyp: string;
 		PATH: string;
 		NODE: string;
 		npm_package_name: string;
 		XDG_RUNTIME_DIR: string;
 		DISPLAY: string;
-		VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
 		LANG: string;
-		POSTGRES_USER: string;
-		VIRTUAL_ENV_PROMPT: string;
 		LS_COLORS: string;
 		VSCODE_GIT_IPC_HANDLE: string;
 		TERM_PROGRAM: string;
@@ -206,7 +185,6 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_event: string;
 		LESSCLOSE: string;
 		CONDA_DEFAULT_ENV: string;
-		VIRTUAL_ENV: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		npm_config_globalconfig: string;
 		npm_config_init_module: string;

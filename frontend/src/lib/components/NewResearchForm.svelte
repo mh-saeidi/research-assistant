@@ -108,6 +108,7 @@
 		align-items: center;
 		justify-content: center;
 		padding: 2rem;
+		padding-bottom: 4rem; /* Added extra bottom padding */
 		background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 	}
 
@@ -119,6 +120,8 @@
 		width: 100%;
 		max-width: 600px;
 		animation: slideUp 0.5s ease-out;
+		max-height: 80vh;
+		overflow-y: auto;
 	}
 
 	@keyframes slideUp {

@@ -45,17 +45,16 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		margin-left: 320px;
-		transition: margin-left 0.3s ease;
+		transition: all 0.3s ease;
 	}
 
 	.chat-main.full-width {
-		margin-left: 0;
+		width: 100%;
 	}
 
 	@media (max-width: 768px) {
 		.chat-main {
-			margin-left: 0;
+			width: 100%;
 		}
 	}
 </style>

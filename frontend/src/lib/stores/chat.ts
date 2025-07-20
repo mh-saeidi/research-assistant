@@ -177,7 +177,7 @@ function createChatStore() {
 				update(state => ({ ...state, isGenerating: false }));
 				
 				// Reload sessions to get the updated list
-				await get(chatStore).loadSessions();
+				await chatStore.loadSessions();
 				
 				return { success: true, data };
 			} catch (error) {

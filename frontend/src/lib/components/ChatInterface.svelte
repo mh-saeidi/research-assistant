@@ -49,9 +49,10 @@
 			chatStore.submitAnalystFeedback(pendingSessionId, feedback).then(result => {
 				if (result.success) {
 					showAnalystFeedback = false;
+					chatStore.setCurrentSession(pendingSessionId);
+					chatStore.loadSessionHistory(pendingSessionId); // Load messages for the completed session
 					pendingSessionId = null;
 					analystData = [];
-					// Reload sessions to show the new completed research
 					chatStore.loadSessions();
 				}
 			});
@@ -219,7 +220,18 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
+		height: 0; /* allow flex: 1 to take full height */
+		min-height: 0;
 		overflow: hidden;
+	}
+
+	/* Ensure the new research panel is centered vertically and horizontally */
+	:global(.new-research-container) {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 0;
 	}
 
 	.error-banner {
@@ -316,6 +328,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		max-width: 600px;
+		margin: 0 auto 1.5rem auto;
 	}
 
 	.message {
@@ -403,6 +417,11 @@
 
 		.message {
 			gap: 8px;
+		}
+
+		.message-group {
+			max-width: 100%;
+			margin: 0 0 1.5rem 0;
 		}
 
 		.message-avatar {

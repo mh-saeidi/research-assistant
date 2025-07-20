@@ -137,6 +137,7 @@
 		z-index: 100;
 		transform: translateX(-100%);
 		transition: transform 0.3s ease;
+		flex-shrink: 0;
 	}
 
 	.sidebar.open {

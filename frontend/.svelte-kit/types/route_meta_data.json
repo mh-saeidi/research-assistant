@@ -1,4 +1,6 @@
 {
 	"/": [],
-	"/chat": []
+	"/chat": [
+		"src/routes/chat/+page.ts"
+	]
 }
