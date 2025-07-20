@@ -4,6 +4,7 @@ from pydantic import BaseModel, EmailStr
 from datetime import datetime
 from typing import List, Optional
 from enum import Enum
+from uuid import UUID
 
 class UserCreate(BaseModel):
     first_name: str
@@ -23,3 +24,21 @@ class AnalystCreate(BaseModel):
 class AnalystFeedback(BaseModel):
     feedback: str
     session_id: str
+
+class ChatHistoryCreate(BaseModel):
+    session_id: str
+    session_name: str
+    message: str
+    response: str
+
+class SessionHistoryResponse(BaseModel):
+    id: int
+    user_id: int 
+    session_id: str
+    session_name: str
+    message: str
+    response: str 
+    created_at: datetime
+
+    class Config:
+        from_attributes = True

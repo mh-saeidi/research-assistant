@@ -168,3 +168,7 @@ For your introduction, use ## Introduction as the section header.
 For your conclusion, use ## Conclusion as the section header.
 
 Here are the sections to reflect on for writing: {formatted_str_sections}"""
+
+session_name_instructions = """Let's give this chat session with our research assistant a helpful and memorable name!
+The name should quickly convey the research area we're exploring and ideally help us find this conversation easily later. 
+Think about what makes this particular session unique."""
