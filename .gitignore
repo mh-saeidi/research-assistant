@@ -50,3 +50,6 @@ dist/
 *.egg-info/
 
 celerybeat*
+
+node_modules/
+frontend/node_modules/

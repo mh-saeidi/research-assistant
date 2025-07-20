@@ -1,9 +1,16 @@
 services:
+  frontend:
+      build:
+        context: .
+        dockerfile: frontend/Dockerfile
+      ports:
+        - "4173:4173"
+      restart: unless-stopped
   backend:
     container_name: backend
     restart: always
     build:
-      context: ./
+      context: ./backend
       dockerfile: Dockerfile
     working_dir: /app
     volumes:
