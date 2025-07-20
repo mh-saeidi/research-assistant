@@ -36,6 +36,7 @@ declare module '$env/static/private' {
 	export const TMPDIR: string;
 	export const CHROME_BIN: string;
 	export const PWD: string;
+	export const npm_config_yes: string;
 	export const NEXT_TELEMETRY_DISABLED: string;
 	export const ASTRO_TELEMETRY_DISABLED: string;
 	export const __NEXT_DISABLE_MEMORY_WATCHER: string;
@@ -110,6 +111,7 @@ declare module '$env/dynamic/private' {
 		TMPDIR: string;
 		CHROME_BIN: string;
 		PWD: string;
+		npm_config_yes: string;
 		NEXT_TELEMETRY_DISABLED: string;
 		ASTRO_TELEMETRY_DISABLED: string;
 		__NEXT_DISABLE_MEMORY_WATCHER: string;
