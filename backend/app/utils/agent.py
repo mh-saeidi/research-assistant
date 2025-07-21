@@ -145,7 +145,7 @@ def search_web(state: InterviewState):
     
     # Search
     search_docs = tavily_search.invoke(search_query.search_query)
-
+    print(search_docs)
      # Format
     formatted_search_docs = "\n\n---\n\n".join(
         [
