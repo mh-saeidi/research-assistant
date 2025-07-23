@@ -1,4 +1,5 @@
 # Research Assistant
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/) [![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=flat&logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 
 ## Table of Contents
 
@@ -63,9 +64,13 @@ Before you begin, ensure you have the following installed:
 
 First, clone the project repository to your local machine:
 
-```git clone <https://github.com/mh-saeidi/research-assistant.git>```
+```bash
+git clone https://github.com/mh-saeidi/research-assistant.git
+```
 
-```cd research-assistant```
+```bash
+cd research-assistant
+```
 
 #### 2\. Configure Environment Variables
 
@@ -73,9 +78,13 @@ The project uses environment variables for sensitive information and configurati
 
 Navigate to the backend directory and create a .env file based on the provided example:
 
-```cd backend```
+```bash
+cd backend
+```
 
-```cp .env.example .env```
+```bash
+cp .env.example .env
+```
 
 Now, open backend/.env in your text editor and fill in the required values.
 
@@ -85,7 +94,9 @@ Make sure to create the .env file in the root directory to configure Docker Comp
 
 From the root directory of the project (where docker-compose.yml is located), run the following command to build the Docker images and start all services:
 
-```docker-compose up --build -d```
+```bash
+docker-compose up --build -d
+```
 
 This command will:
 
@@ -104,9 +115,13 @@ If you wish to develop on the project, you can run the backend and frontend serv
 
 1. **Install dependencies:**
 
-```cd backend```
+```bash
+cd backend
+```
 
-```pip install -r requirements.txt```
+```bash
+pip install -r requirements.txt
+```
 
 1. **Run database locally (optional, or use Docker Compose DB):**
 
@@ -114,7 +129,9 @@ Ensure your DATABASE_URL in backend/.env points to a local PostgreSQL instance i
 
 1. **Run the FastAPI application:**
 
-```uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload```
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
 
 The backend will be accessible at <http://localhost:8000>.
 
@@ -122,16 +139,22 @@ The backend will be accessible at <http://localhost:8000>.
 
 1. **Install dependencies:**
 
-```cd frontend```
+```bash
+cd frontend
+```
 
-```npm install```
+```bash
+npm install
+```
 
 1. **Run the SvelteKit development server:**
 
-```npm run dev```
+```bash
+npm run dev
+```
 
 The frontend will be accessible at <http://localhost:3000>. You may need to adjust the API endpoint in the frontend code to point to your local backend (e.g., <http://localhost:8000>) if not using Nginx.
 
 ## License
 
-See the [LICENSE](https://www.google.com/search?q=LICENSE) file for more details.
+See the [LICENSE](https://github.com/mh-saeidi/research-assistant/blob/main/LICENSE) file for more details.
