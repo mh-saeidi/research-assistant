@@ -4,19 +4,19 @@
 ## Table of Contents
 
 - [Research Assistant](#top)
-  - [Table of Contents](#_Table_of_Contents)
+  - [Table of Contents](#Table-of-Contents)
   - [Overview](#Overview)
   - [Features](#Features)
-  - [Technologies Used](#Technologies_Used)
-  - [Getting Started](#Getting_Started)
+  - [Technologies Used](#Technologies-Used)
+  - [Getting Started](#Getting-Started)
     - [Prerequisites](#Prerequisites)
     - [Installation](#Installation)
-      - [1\. Clone the Repository](#1_Clone_the)
-      - [2\. Configure Environment Variables](#2_Configure_Environment)
-      - [3\. Build and Run with Docker Compose](#3_Build_and)
+      - [1\. Clone the Repository](#1-Clone-the-Repository)
+      - [2\. Configure Environment Variables](#2-Configure-Environment-Variables)
+      - [3\. Build and Run with Docker Compose](#3-Build-and-Run-with-Docker-Compose)
   - [Development](#Development)
-    - [Backend Development](#Backend_Development)
-    - [Frontend Development](#Frontend_Development)
+    - [Backend Development](#Backend-Development)
+    - [Frontend Development](#Frontend-Development)
   - [License](#License)
 
 ## Overview
