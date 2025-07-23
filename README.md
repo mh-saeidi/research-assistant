@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-- [Research Assistant](#_top)
+- [Research Assistant](#top)
   - [Table of Contents](#_Table_of_Contents)
   - [Overview](#_Overview)
   - [Features](#_Features)
@@ -17,7 +17,7 @@
   - [Development](#_Development)
     - [Backend Development](#_Backend_Development)
     - [Frontend Development](#_Frontend_Development)
-  - [License](#_License)
+  - [License](#License)
 
 ## Overview
 
