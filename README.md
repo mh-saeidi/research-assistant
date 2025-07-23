@@ -95,7 +95,7 @@ Make sure to create the .env file in the root directory to configure Docker Comp
 From the root directory of the project (where docker-compose.yml is located), run the following command to build the Docker images and start all services:
 
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
 
 This command will:
