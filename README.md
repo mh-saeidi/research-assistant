@@ -1,0 +1,137 @@
+# Research Assistant
+
+## Table of Contents
+
+- [Research Assistant](#_top)
+  - [Table of Contents](#_Table_of_Contents)
+  - [Overview](#_Overview)
+  - [Features](#_Features)
+  - [Technologies Used](#_Technologies_Used)
+  - [Getting Started](#_Getting_Started)
+    - [Prerequisites](#_Prerequisites)
+    - [Installation](#_Installation)
+      - [1\. Clone the Repository](#_1._Clone_the)
+      - [2\. Configure Environment Variables](#_2._Configure_Environment)
+      - [3\. Build and Run with Docker Compose](#_3._Build_and)
+  - [Development](#_Development)
+    - [Backend Development](#_Backend_Development)
+    - [Frontend Development](#_Frontend_Development)
+  - [License](#_License)
+
+## Overview
+
+The Research Assistant is an AI-powered application designed to streamline the research process. It provides an intuitive chat interface where users can interact with an intelligent agent to conduct research, retrieve information, and manage their research sessions efficiently. The application is built with a modern tech stack, featuring a FastAPI backend, a SvelteKit frontend, and orchestrated using Docker Compose for easy deployment and scalability.
+
+## Features
+
+- **AI-Powered Research:** Interact with an intelligent agent to assist with research queries.
+- **Interactive Chat Interface:** A responsive and user-friendly chat experience for seamless interaction.
+- **Research Session Management:** Create, manage, and review different research sessions.
+- **Modular Architecture:** Separated backend and frontend services for maintainability and scalability.
+- **Dockerized Deployment:** Easy setup and deployment using Docker and Docker Compose.
+
+## Technologies Used
+
+- **Backend:**
+  - [FastAPI](https://fastapi.tiangolo.com/) - High-performance web framework.
+  - [SQLAlchemy](https://www.sqlalchemy.org/) - SQL toolkit and Object-Relational Mapper (ORM).
+  - [PostgreSQL](https://www.postgresql.org/) - Robust relational database.
+  - [Langchain](https://www.langchain.com/) - Framework for developing applications powered by language models.
+- **Frontend:**
+  - [SvelteKit](https://kit.svelte.dev/) - Web framework for building highly performant Svelte apps.
+  - [TypeScript](https://www.typescriptlang.org/) - Superset of JavaScript that adds static types.
+  - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for rapid UI development.
+- **Deployment & Orchestration:**
+  - [Docker](https://www.docker.com/) - Containerization platform.
+  - [Docker Compose](https://docs.docker.com/compose/) - Tool for defining and running multi-container Docker applications.
+  - [Nginx](https://www.nginx.com/) - High-performance HTTP server and reverse proxy.
+
+## Getting Started
+
+Follow these instructions to set up and run the Research Assistant on your local machine.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Docker](https://github.com/docker/docker-install.git) (includes Docker Engine and Docker Compose)
+
+### Installation
+
+#### 1\. Clone the Repository
+
+First, clone the project repository to your local machine:
+
+```git clone <https://github.com/mh-saeidi/research-assistant.git>```
+
+```cd research-assistant```
+
+#### 2\. Configure Environment Variables
+
+The project uses environment variables for sensitive information and configuration.
+
+Navigate to the backend directory and create a .env file based on the provided example:
+
+```cd backend```
+
+```cp .env.example .env```
+
+Now, open backend/.env in your text editor and fill in the required values.
+
+Make sure to create the .env file in the root directory to configure Docker Compose environment variables!
+
+#### 3\. Build and Run with Docker Compose
+
+From the root directory of the project (where docker-compose.yml is located), run the following command to build the Docker images and start all services:
+
+```docker-compose up --build -d```
+
+This command will:
+
+- Build the backend Docker image.
+- Build the frontend Docker image.
+- Set up a PostgreSQL database container.
+- Configure an Nginx reverse proxy to route requests.
+
+Once all services are up and running, you can access the application from the ip address or localhost
+
+## Development
+
+If you wish to develop on the project, you can run the backend and frontend services independently.
+
+### Backend Development
+
+1. **Install dependencies:**
+
+```cd backend```
+
+```pip install -r requirements.txt```
+
+1. **Run database locally (optional, or use Docker Compose DB):**
+
+Ensure your DATABASE_URL in backend/.env points to a local PostgreSQL instance if not using the Docker Compose db service.
+
+1. **Run the FastAPI application:**
+
+```uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload```
+
+The backend will be accessible at <http://localhost:8000>.
+
+### Frontend Development
+
+1. **Install dependencies:**
+
+```cd frontend```
+
+```npm install```
+
+1. **Run the SvelteKit development server:**
+
+```npm run dev```
+
+The frontend will be accessible at <http://localhost:3000>. You may need to adjust the API endpoint in the frontend code to point to your local backend (e.g., <http://localhost:8000>) if not using Nginx.
+
+## License
+
+See the [LICENSE](https://www.google.com/search?q=LICENSE) file for more details.
