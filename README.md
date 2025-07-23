@@ -1,5 +1,6 @@
 # Research Assistant
-[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/) [![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=flat&logo=docker&logoColor=white)](https://docs.docker.com/compose/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/) [![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white)](https://www.langchain.com/) [![LangGraph](https://img.shields.io/badge/LangGraph-053D5B?style=flat&logo=langgraph&logoColor=white
+)](https://www.langchain.com/langgraph) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/) [![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://www.docker.com/) [![Docker Compose](https://img.shields.io/badge/Docker_Compose-2496ED?style=flat&logo=docker&logoColor=white)](https://docs.docker.com/compose/)
 
 ## Table of Contents
 
@@ -45,7 +46,7 @@ The Research Assistant is an AI-powered application designed to streamline the r
 - **Deployment & Orchestration:**
   - [Docker](https://www.docker.com/) - Containerization platform.
   - [Docker Compose](https://docs.docker.com/compose/) - Tool for defining and running multi-container Docker applications.
-  - [Nginx](https://www.nginx.com/) - High-performance HTTP server and reverse proxy.
+  - [Nginx](https://nginx.org/) - High-performance HTTP server and reverse proxy.
 
 ## Getting Started
 
